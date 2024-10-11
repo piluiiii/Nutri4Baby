@@ -1,0 +1,277 @@
+/* styles.css - Design moderne et épuré inspiré par l'exemple fourni */
+
+/*      */
+/* BODY */
+/*      */
+
+/* Corps général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 375px; /* Largeur max d'un iPhone */
+    margin: auto;
+}
+
+/*         */
+/* EN-TETE */
+/*         */
+
+/* En-tête */
+header {
+    background-color: #A3D8E5;
+    color: #34495E;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 2px solid #A3D8E5;
+    font-size: 1.5em;
+    border-radius: 15px;
+}
+
+/*      */
+/* MAIN */
+/*      */
+
+/* Contenu principal */
+main {
+    flex-grow: 1;
+    padding: 1em;
+    overflow-y: auto;
+    background-color: #DAF0F4; 
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+/*        */
+/* NAVBAR */
+/*        */
+
+/* Navigation en bas avec des boutons ronds */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 375px;
+    background-color: #A3D8E5;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.bottom-nav button {
+    background: linear-gradient(145deg, #DAF0F4, #A3D8E5);
+    border: none;
+    border-radius: 50%;
+    padding: 1em;
+    font-size: 1.2em;
+    color: white;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bottom-nav button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(145deg, #87CBD6, #61A5B1);
+}
+
+/*        */
+/* CAMERA */
+/*        */
+
+/* Cadre pour l'aperçu de la caméra */
+#camera-preview {
+    width: 100%; /* Ajusté à la largeur de l'écran */
+    max-width: 320px; /* Taille maximale */
+    height: 240px; /* Hauteur pour créer un rectangle */
+    background-color: #EAF7FA; /* Fond bleu clair pour simuler l'aperçu de la caméra */
+    border-radius: 20px; /* Bordures arrondies */
+    margin: 0 auto 20px auto; /* Centré avec un espace en bas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #A3D8E5; /* Bordure bleue claire */
+    color: #34495E; /* Couleur du texte */
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Bouton de capture d'image */
+#takePhotoButton {
+    background: linear-gradient(145deg, #76D4E1, #49C3D0);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centré horizontalement */
+    display: block; /* Convertir en block pour centrer facilement */
+}
+
+#takePhotoButton:hover {
+    background: linear-gradient(145deg, #5FC8D3, #3DB3BE);
+}
+
+/* Bouton pour afficher les résultats */
+#showResultsButton {
+    background: linear-gradient(145deg, #FFB3C1, #FF89A2); /* Style de dégradé rose */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centré avec un espace au-dessus */
+    display: block;
+}
+
+#showResultsButton:hover {
+    background: linear-gradient(145deg, #FF89A2, #FF6585);
+}
+
+/*       */
+/* FORUM */
+/*       */
+
+/* Conteneur du forum */
+.forum-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement entre les posts */
+    padding: 1em;
+    background-color: #EAF7FA; /* Fond clair pour contraster */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Chaque post du forum */
+.forum-post {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forum-post h3 {
+    color: #34495E; /* Couleur pour les titres */
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.forum-post p {
+    color: #7F8C8D;
+    font-size: 1em;
+    margin: 0 0 10px 0;
+}
+
+.post-author {
+    font-size: 0.9em;
+    color: #95A5A6;
+}
+
+/* Bouton pour ajouter un nouveau post */
+#newPostButton {
+    background: linear-gradient(145deg, #76D4E1, #49C3D0);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#newPostButton:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #5FC8D3, #3DB3BE);
+}
+
+
+/*            */
+/* HISTORIQUE */
+/*            */
+
+/* Historique et graphiques */
+#history .graph-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*         */
+/* CHATBOT */
+/*         */
+
+/* Chatbot intégré à l'intérieur de l'application */
+#chatbot-bubble {
+    position: absolute; /* Fixé à l'intérieur du conteneur de l'application */
+    bottom: 100px; /* Ajusté pour être juste au-dessus de la barre de navigation */
+    right: 20px; /*Aligné avec le bord droit */
+    background: linear-gradient(145deg, #A3D8E5, #78B9C9);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 10; /* Assure qu'il soit visible au-dessus des autres éléments */
+}
+
+#chatbot-bubble:hover {
+    transform: scale(1.1);
+    background: linear-gradient(145deg, #87CBD6, #61A5B1);
+}
+
+#chatbot-window {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    width: 280px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+#chatbot-header {
+    background-color: #A3D8E5;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatbot-content {
+    padding: 15px;
+    font-size: 1em;
+    color: #34495E;
+}
